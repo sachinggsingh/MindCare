@@ -1,0 +1,18 @@
+Client Side Ready 
+
+
+
+Now work on admin part 
+create solutions for the patient thing remaining 
+ui done error in api do figure it out 
+
+
+the problem created their checking means what progress thing remaining 
+track system remaining 
+
+
+
+
+
+
+http://localhost:8000/api/v1/tasks/problems/67f55a7b35281e40ab290179/tasks
