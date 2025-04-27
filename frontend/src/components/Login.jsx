@@ -18,10 +18,19 @@ const Login = () => {
   });
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    
+    if (token) {
+      // Store token and update auth state
+      localStorage.setItem('token', token);
+      dispatch(loginUser({ token }));
+      navigate('/');
+    }
     if (user) {
       navigate('/');
     }
-  }, [user, navigate]);
+  }, [dispatch, navigate, user]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -41,8 +50,7 @@ const Login = () => {
   };
 
   const handleGoogleLogin = () => {
-    // Implement Google login through Redux
-    console.log("Google login not implemented yet");
+    console.log("Google login clicked");
   };
 
   if (error) {
