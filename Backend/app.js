@@ -6,7 +6,6 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
 const path = require('path')
-// const session = require('express-session');
 
 
 // Routes
@@ -15,7 +14,6 @@ const problemRoute = require('./routes/problemRoute')
 const recoveryRoute = require('./routes/recoveryRoute')
 const taskRoute = require('./routes/taskRoutes')
 const patientRoute = require('./routes/patientRoute')
-
 
 // Port
 const PORT = process.env.PORT || 5000
@@ -34,11 +32,6 @@ const corsOption ={
         methods: ['GET', 'POST', 'PUT', 'DELETE']
 }
 app.use(cors(corsOption))
-// app.use(session({
-//     secret: 'your_secret_key',
-//     resave: false,
-//     saveUninitialized: true,
-// }));
 
 
 
