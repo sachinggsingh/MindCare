@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
-const path = require('path')
+
 
 
 // Routes
@@ -23,8 +23,8 @@ const PORT = process.env.PORT || 5000
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser()) 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,'views'));
+
+
 
 const corsOption ={
         origin: 'http://localhost:5173',
@@ -50,10 +50,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
 })
 
 
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-app.use('/api/v1/auth', userRoute)
+app.use('/api/v1/auth',userRoute)
 app.use('/api/v1/problem', problemRoute)
 app.use('/api/v1/recovery', recoveryRoute)
 app.use('/api/v1/tasks', taskRoute)

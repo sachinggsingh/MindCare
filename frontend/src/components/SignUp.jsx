@@ -150,22 +150,7 @@ export default function SignUpForm() {
             {loading ? 'Creating account...' : 'Sign up'}
           </motion.button>
         </form>
-
-        <div className="relative my-6">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-200"></div>
-          </div>
-          <div className="relative flex justify-center text-sm uppercase">
-            <span className="bg-white px-2 text-gray-500">Or continue with</span>
-          </div>
-        </div>
-
-        <button 
-          className="w-full border border-gray-200 p-3 rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
-          onClick={() => {/* TODO: Implement Google Sign up */}}
-        >
-          <FcGoogle className="mr-2 h-5 w-5" /> Sign up with Google
-        </button>
+        
 
         <p className="mt-6 text-center text-gray-600">
           Already have an account?{' '}
