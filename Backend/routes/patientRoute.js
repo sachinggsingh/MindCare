@@ -3,8 +3,8 @@ const router = express.Router();
 
 const auth = require('../middleware/auth');
 const patientCTRL = require('../controllers/patientProblem');
-
+const authAdmin = require('../middleware/authAdmin');
 router.post('/create',auth,  patientCTRL.createPatientProblem);
-router.get('/get-all',  patientCTRL.getPatientProblem);
+router.get('/get-all', authAdmin, patientCTRL.getPatientProblem);
 
 module.exports = router;

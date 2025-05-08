@@ -11,6 +11,8 @@ import DetailServices from './Pages/DetailServices'
 import CreateProblem from './components/Problems/CreateProblem'
 import TaskViewerPage from './Pages/TaskViewerPage'
 import Completion from './Pages/Completion'
+import AdminLogin from './Pages/AdminLogin'
+import AdminPanel from './Pages/AdminPanel'
 
 const App = () => {
   return (
@@ -27,6 +29,10 @@ const App = () => {
         <Route path="/create-problem" element={<CreateProblem />} />
         <Route path="/tasks/:problemId" element={<TaskViewerPage/>}/> 
         <Route path="/completion" element={<Completion />} />
+        
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminPanel />} />
       </Routes>
     </Router>
   )

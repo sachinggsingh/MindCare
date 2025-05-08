@@ -43,7 +43,10 @@ app.use((err, req, res, next) => {
 
 
 // Database connection
-mongoose.connect(process.env.MONGO_URL).then(() => {
+mongoose.connect(process.env.MONGO_URL,{
+    useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
     console.log("Database connection successful")
 }).catch((err) => {
     console.log(err)
